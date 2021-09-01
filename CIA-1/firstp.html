@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+h1 {text-align: center;}
+iframe {text-align: center;}
+</style>
+<h1 style="font-family:Dubai;font-size:48px;color:#190e7d"> Welcome to ITAT</h1>
+<div style="background-image: url('bgimage.jpg');">
+
+<p style="font-family:Montserrat;font-size:16px;color:#fcba03">Click here to locate yourself.</p>
+<p style="font-family:Montserrat;font-size:16px;color:#0C4BBD">Keep in mind, the package tours will change according to your current location. Also, tickets are risk to market availability.</p>
+<button onclick="getLocation()">Locate yourself</button>
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+<iframe width="720" height="480" src="https://www.youtube.com/embed/IgAnj6r1O48">
+</iframe>
+
+<img src="indiam.png" alt="Workplace" usemap="#workmap" width="1445" height="1610">
+<map name="workmap">
+  <area shape="rect" coords="238,1134,806,1092" alt="South India" href="south.html">
+  <area shape="rect" coords="4,776,825,740" alt="North India" href="north.html">
+  <area shape="circle" coords="775,510,1436,437" alt="East India" href="east.html">
+</map>
